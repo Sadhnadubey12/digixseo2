@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DigiXseo</title>
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    .floating-buttons {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      z-index: 1000;
+    }
+
+    .floating-button {
+      background-color: #25D366; /* WhatsApp green */
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      animation: blink 1.5s infinite;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .floating-button.call {
+      background-color: #34b7f1; /* Call button color */
+    }
+
+    .floating-button:hover {
+      transform: scale(1.1);
+    }
+
+    @keyframes blink {
+      0%, 100% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0.5;
+      }
+    }
+  </style>
+</head>
+
+<body id="top">
+  <!-- Your existing content here -->
+
+  <div class="floating-buttons">
+    <button class="floating-button whatsapp" onclick="location.href='https://wa.me/919667674332';">
+      <ion-icon name="logo-whatsapp"></ion-icon>
+    </button>
+    <button class="floating-button call" onclick="location.href='tel:+919667674332';">
+      <ion-icon name="call"></ion-icon>
+    </button>
+  </div>
+
+  <!-- Add the following script to include Ionicons -->
+  <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons.js"></script>
+</body>
+
+</html>
